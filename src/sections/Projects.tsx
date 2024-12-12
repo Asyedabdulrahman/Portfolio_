@@ -18,7 +18,7 @@ const portfolioProjects = [
     results: [
       { title: "ZOHO Hackathon: zIDE - IDE for Zoho ecosystem." },
       { title: "AI-Powered: Enhances code and optimizes uploaded files." },
-      { title: "Productive: Boosts developer productivity." },
+      { title: "Productive: Boosts developer productivity" },
     ],
     link: "https://z-ide.vercel.app/",
     image: zide,
