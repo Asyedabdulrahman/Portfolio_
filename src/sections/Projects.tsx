@@ -1,7 +1,4 @@
 "use client";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import youtubeimage from "@/assets/images/youtube-image.png";
 import eCommerce from "@/assets/images/eCommerce.png";
 import lms from "@/assets/images/LMS.png";
@@ -9,11 +6,23 @@ import netflix from "@/assets/images/netflix.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import zide from "@/assets/images/zide.png"
 
 const portfolioProjects = [
+  {
+    company: "Dec",
+    year: "2024",
+    title: "zIDE",
+    results: [
+      { title: "ZOHO Hackathon: zIDE - IDE for Zoho ecosystem." },
+      { title: "AI-Powered: Enhances code and optimizes uploaded files." },
+      { title: "Productive: Boosts developer productivity." },
+    ],
+    link: "https://z-ide.vercel.app/",
+    image: zide,
+  },
   {
     company: "August",
     year: "2024",
