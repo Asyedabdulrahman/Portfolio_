@@ -9,7 +9,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import zide from "@/assets/images/zide.png"
-import { DragcloseModal } from "@/components/DragcloseModal"
+// import { DragcloseModal } from "@/components/DragcloseModal"
 
 const portfolioProjects = [
     {
