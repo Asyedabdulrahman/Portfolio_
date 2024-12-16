@@ -128,7 +128,7 @@ export const ProjectsSection = () => {
                     </ul>
                     <div className="gap-4 inline-flex">
                       <a href={project.link} target="_blank">
-                        <button onClick={() => setOpen(true)} className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4">
+                        <button className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4">
                           view live site
                           <span>
                             <ArrowUpRightIcon className="size-6" />
