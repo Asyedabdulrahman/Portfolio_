@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import Image from "next/image";
 import TinImage from "@/assets/images/3D-Tin.png"
+import ImageSlider from "@/assets/images/ImageSlider.png"
 
 
 export const MiscProject = () => {
@@ -21,8 +22,24 @@ export const MiscProject = () => {
             ],
             link: "https://3-d-tin-rotation.vercel.app/",
             image: TinImage
+        }, {
+            company: "Dec",
+            year: "2024",
+            title: "Animated Image Slider",
+            results: [
+                {
+                    title: "Easily adaptable with smooth, reversible animations."
+                },
+                {
+                    title: "Adapts to screens, reusable, with a fading edge effect."
+                },
+                {
+                    title: "Done only with CSS"
+                },
+            ],
+            link: "https://animated-image-slider.vercel.app/",
+            image: ImageSlider
         },
-
     ]
 
     return (
@@ -79,7 +96,7 @@ export const MiscProject = () => {
                                         <Image
                                             src={project?.image}
                                             alt={project?.title}
-                                            className="mt-8 -mb-4 mx-auto md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none lg:rounded-tl-lg md:rounded-t-lg"
+                                            className="mt-8 -mb-4 mx-auto md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none lg:rounded-tl-lg md:rounded-t-lg "
                                         />
                                     </div>
                                 </div>

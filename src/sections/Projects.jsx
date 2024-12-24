@@ -258,14 +258,16 @@ export const ProjectsSection = () => {
                     </ul>
 
                     <div className="flex gap-4">
-                      <a href={project.link} target="_blank">
-                        <button className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-lg sm:text-xl md:text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4 shrink-0 whitespace-normal break-words">
-                          view live site
-                          <span>
-                            <ArrowUpRightIcon className="size-6" />
-                          </span>
-                        </button>
-                      </a>
+                      <div className="">
+                        <a href={project.link} target="_blank">
+                          <button className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-lg sm:text-xl md:text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4 shrink-0 whitespace-normal break-words">
+                            view live site
+                            <span>
+                              <ArrowUpRightIcon className="size-6" />
+                            </span>
+                          </button>
+                        </a>
+                      </div>
 
                       <button
                         onClick={() => {
