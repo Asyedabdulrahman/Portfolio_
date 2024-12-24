@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import Image from "next/image";
 import TinImage from "@/assets/images/3D-Tin.png"
-import ImageSlider from "@/assets/images/ImageSlider.png"
+import ImageSlider from "@/assets/images/imageSlider.png"
 
 
 export const MiscProject = () => {
