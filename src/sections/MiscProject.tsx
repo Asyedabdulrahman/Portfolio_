@@ -6,10 +6,24 @@ import { Card } from "@/components/Card";
 import Image from "next/image";
 import TinImage from "@/assets/images/3D-Tin.png"
 import ImageSlider from "@/assets/images/imageSlider.png"
+import JSLoversLogo from "@/assets/images/jslovers-logo.png"
 
 
 export const MiscProject = () => {
     const portfolioProjects = [
+        {
+            company: "Jun 2024",
+            year: "Present",
+            title: "JSLovers Co - Organizer Chennai Chapter",
+            results: [
+                {
+                    title: "Community Growth & Leadership – Played a key role in organizing and leading JSLovers Chennai meetups, bringing 100+ attendees together and showcasing strong leadership skills."
+                },
+                { title: "Skills Development & Mentorship – Actively shared insights on advanced JavaScript topics, helping members level up their skills and positioning yourself as a mentor in the community." }
+            ],
+            link: "https://www.linkedin.com/company/thejslovers/",
+            image: JSLoversLogo
+        },
         {
             company: "Dec",
             year: "2024",
@@ -84,7 +98,8 @@ export const MiscProject = () => {
                                             ))}
                                         </ul>
                                         <a href={project.link} target="_blank">
-                                            <button className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4">
+                                            <button className="bg-white text-gray-600 rounded-lg w-full h-12 p-2 text-lg sm:text-xl md:text-2xl font-semibold capitalize inline-flex items-center justify-center gap-2 mt-7 md:w-auto px-4 shrink-0 whitespace-nowrap break-words overflow-hidden">
+
                                                 view live site
                                                 <span>
                                                     <ArrowUpRightIcon className="size-6" />
