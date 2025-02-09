@@ -268,7 +268,6 @@ export const ProjectsSection = () => {
                           </button>
                         </a>
                       </div>
-                      
 
                       <button
                         onClick={() => {
@@ -278,7 +277,7 @@ export const ProjectsSection = () => {
                       >
                         more...
                         <DragCloseDrawer open={open} setOpen={setOpen}>
-                          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
+                          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 z-100">
                             {open && selectedIndex !== null && (
                               <>
                                 <h2 className="text-4xl font-bold text-neutral-200">
@@ -341,7 +340,7 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={handleClose}
-          className="fixed inset-0 z-50 bg-neutral-950/70"
+          className="fixed inset-0 z-100 bg-neutral-950/70"
         >
           <motion.div
             id="drawer"
@@ -379,7 +378,7 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
                 className="h-2 w-14 cursor-grab touch-none rounded-full bg-neutral-700 active:cursor-grabbing"
               ></button>
             </div>
-            <div className="relative z-0 h-full overflow-y-scroll p-4 pt-12">
+            <div className="relative z-100 h-full overflow-y-scroll p-4 pt-12">
               {children}
             </div>
           </motion.div>
