@@ -216,7 +216,7 @@ export const ProjectsSection = () => {
   };
 
   return (
-    <section className="pb-16 lg:py-24 z-30" id="project ">
+    <section className="pb-16 lg:py-24 z-30" id="project">
       <div className="container flex justify-center">
         <div className="">
           <SectionHeader

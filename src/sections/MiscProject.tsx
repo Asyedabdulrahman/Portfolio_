@@ -62,7 +62,7 @@ export const MiscProject = () => {
                 <div className="">
                     <SectionHeader
                         eyebrow="Real world projects and Implementation"
-                        title=" Misc. Projects"
+                        title="Misc. Projects & Contributions"
                         description="Go to the one that amazed you."
                     />
                     <div className="flex flex-col mt-10 gap-20 md:mt-20 ">

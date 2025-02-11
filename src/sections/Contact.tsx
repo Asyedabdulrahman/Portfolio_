@@ -27,11 +27,11 @@ export const ContactSection = () => {
               </p>
             </div>
             <div>
-              <a href="https://syed-frontend-resume.tiiny.site/" target="_blank">
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max">
-                <span className="font-semibold">Contact Me</span>
-                <ArrowUpRightIcon className="size-4" />
-              </button>
+              <a href="https://syed-resume.tiiny.site" target="_blank">
+                <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max">
+                  <span className="font-semibold">Contact Me</span>
+                  <ArrowUpRightIcon className="size-4" />
+                </button>
               </a>
             </div>
           </div>

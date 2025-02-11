@@ -47,47 +47,34 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "painting",
+    title: "Leetcode",
     emoji: "🎨",
     left: "5%",
-    top: "5%",
+    top: "0%",
+    link: "https://leetcode.com/u/rahman33/"
   },
   {
-    title: "photography",
+    title: "LinkedIn",
     emoji: "📸",
     left: "50%",
     top: "5%",
+    link: "https://www.linkedin.com/in/syedabdulrahman33/"
   },
   {
-    title: "gaming",
+    title: "Github",
     emoji: "🎯",
-    left: "10%",
+    left: "20%",
     top: "35%",
+    link: "https://github.com/Asyedabdulrahman"
   },
   {
-    title: "jogging",
+    title: "Vercel",
     emoji: "🏃‍♀️",
-    left: "35%",
-    top: "40%",
+    left: "55%",
+    top: "48%",
+    link: "https://vercel.com/syedabdulrahman3"
   },
-  {
-    title: "fight",
-    emoji: "🥷",
-    left: "70%",
-    top: "45%",
-  },
-  {
-    title: "fitness",
-    emoji: "💪",
-    left: "5%",
-    top: "65%",
-  },
-  {
-    title: "reading",
-    emoji: "📖",
-    left: "45%",
-    top: "70%",
-  },
+
 ];
 
 export const AboutSection = () => {
@@ -134,27 +121,26 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="Beyond the code"
-                description="Play with Drag and Drop ⬇️"
+                title="Dev Ecosystem & Tech Stack Tools"
+                description="Click to know more About Me ⬇️"
                 className="px-6 py-6 "
               />
               <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map((hobbie) => (
-                  <motion.div
+                  <button
                     key={hobbie.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute "
+                    className="inline-flex items-center gap-2 px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full  absolute "
                     style={{
                       left: hobbie.left,
                       top: hobbie.top,
                     }}
-                    drag
-                    dragConstraints={constraintRef}
+                    onClick={() => window.open(hobbie.link, "_blank")}
                   >
-                    <span className="font-medium text-gray-950">
+                    <span className="font-medium text-2xl text-gray-950">
                       {hobbie.title}
                     </span>
                     <span>{hobbie.emoji}</span>
-                  </motion.div>
+                  </button>
                 ))}
               </div>
             </Card>
