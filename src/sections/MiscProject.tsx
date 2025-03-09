@@ -7,6 +7,7 @@ import Image from "next/image";
 import TinImage from "@/assets/images/3D-Tin.png"
 import ImageSlider from "@/assets/images/imageSlider.png"
 import JSLoversLogo from "@/assets/images/jslovers-logo.png"
+import menuoverlay from "@/assets/images/menuOverlaySyed.png"
 
 
 export const MiscProject = () => {
@@ -54,6 +55,25 @@ export const MiscProject = () => {
             link: "https://animated-image-slider.vercel.app/",
             image: ImageSlider
         },
+        {
+            company: "Mar",
+            year: "2025",
+            title: "Menu Overlay - GSAP",
+            results: [
+                {
+                    title: "Easily adaptable with smooth, reversible animations."
+                },
+                {
+                    title: "Adapts to screens responsive, Just with MENU Button."
+                },
+                {
+                    title: "Done on Vanilla js with GSAP"
+                },
+            ],
+            link: "https://menu-overlay-gsap.vercel.app/",
+            image: menuoverlay
+
+        }
     ]
 
     return (
