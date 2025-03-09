@@ -64,7 +64,7 @@ export const MiscProject = () => {
                     title: "Easily adaptable with smooth, reversible animations."
                 },
                 {
-                    title: "Adapts to screens responsive, Just with MENU Button."
+                    title: "Adapts to screens responsive, Just click MENU Button."
                 },
                 {
                     title: "Done on Vanilla js with GSAP"
