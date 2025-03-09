@@ -6,9 +6,11 @@ import netflix from "@/assets/images/netflix.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import cssBro from "@/assets/images/cssBro.png";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Card } from "@/components/Card";
 import zide from "@/assets/images/zide.png";
+import pluginStudio from "@/assets/images/pluginStudio.png";
+import { Card } from "@/components/Card";
 import { useState } from "react";
 import {
   useDragControls,
@@ -145,6 +147,46 @@ Why MyTube Stands Out:<br /><br />
 ];
 
 const portfolioProjects = [
+  {
+    company: "Feb",
+    year: "2025",
+    title: "PlugIn Studio",
+    results: [
+      {
+        title: "Seamlessly Delivered Project to Client with 100% Satifaction",
+      },
+      {
+        title: "Building High-Performance UIs with React.js, and TailwindCSS",
+      },
+      {
+        title:
+          "Optimized Website is on the way for better SEO (Hugo) and Performance",
+      }, 
+    ],
+    link: "https://pluginstudio.in",
+    image: pluginStudio,
+  },
+  {
+    company: "Feb",
+    year: "2025",
+    title: "cssBro",
+    results: [
+      {
+        title:
+          "Live CSS Inspect – View CSS styles in real-time of every element in your webpage.",
+      },
+      {
+        title:
+          " 100% Free & Open Source – No paywalls, no subscriptions, fully community-driven.",
+      },
+      {
+        title:
+          " Box Model Insights – Visualize margins, padding, and element sizes.",
+      },
+    ],
+    link: "https://github.com/DevCafeInn/cssBro",
+    image: cssBro,
+  },
   {
     company: "Dec",
     year: "2024",
