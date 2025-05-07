@@ -8,6 +8,8 @@ import TinImage from "@/assets/images/3D-Tin.png"
 import ImageSlider from "@/assets/images/imageSlider.png"
 import JSLoversLogo from "@/assets/images/jslovers-logo.png"
 import menuoverlay from "@/assets/images/menuOverlaySyed.png"
+import sliderLeftRight from "../assets/images/imageSliderLeftRight.png"
+import heroAnimationProject from "../assets/images/HeroAnimationProject.png"
 
 
 export const MiscProject = () => {
@@ -24,6 +26,19 @@ export const MiscProject = () => {
             ],
             link: "https://www.linkedin.com/company/thejslovers/",
             image: JSLoversLogo
+        },
+        {
+            company: "Apr",
+            year: "2025",
+            title: "Hero Image Slider Animation",
+            results: [
+                {
+                    title: "Tested my CSS Skill after what i've Learned."
+                },
+                { title: "Done this project using GSAP" }
+            ],
+            link: "https://hero-animation-testing.vercel.app/",
+            image: heroAnimationProject
         },
         {
             company: "Dec",
