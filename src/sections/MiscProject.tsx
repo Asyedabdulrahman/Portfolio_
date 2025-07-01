@@ -10,6 +10,7 @@ import JSLoversLogo from "@/assets/images/jslovers-logo.png"
 import menuoverlay from "@/assets/images/menuOverlaySyed.png"
 import sliderLeftRight from "../assets/images/imageSliderLeftRight.png"
 import heroAnimationProject from "../assets/images/HeroAnimationProject.png"
+import web1 from "../assets/images/web1.png"
 
 
 export const MiscProject = () => {
@@ -28,6 +29,18 @@ export const MiscProject = () => {
             image: JSLoversLogo
         },
         {
+            company: "jun",
+            year: "2025",
+            title: "Web Hero Animation 1",
+            results: [
+                {
+                    title: "Tested my CSS Skill after what i've Learned."
+                },
+                { title: "Done this project using GSAP" }
+            ],
+            link: "https://web1-two-snowy.vercel.app/",
+            image: web1
+        }, {
             company: "Apr",
             year: "2025",
             title: "Hero Image Slider Animation",
