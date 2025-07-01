@@ -11,7 +11,6 @@ import { SectionHeader } from "@/components/SectionHeader";
 import zide from "@/assets/images/zide.png";
 import pluginStudio from "@/assets/images/pluginStudio.png";
 import cafeAstra from "../assets/images/cafeAstra.png";
-import web1 from "../assets/images/img-1.png";
 import { Card } from "@/components/Card";
 import { useState } from "react";
 import {
