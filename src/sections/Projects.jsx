@@ -149,25 +149,6 @@ Why MyTube Stands Out:<br /><br />
 
 const portfolioProjects = [
   {
-    company: "Feb",
-    year: "2025",
-    title: "PlugIn Studio",
-    results: [
-      {
-        title: "Seamlessly Delivered Project to Client with 100% Satifaction",
-      },
-      {
-        title: "Building High-Performance UIs with React.js, and TailwindCSS",
-      },
-      {
-        title:
-          "Optimized Website is on the way for better SEO (Hugo) and Performance",
-      },
-    ],
-    link: "https://pluginstudio.in",
-    image: pluginStudio,
-  },
-  {
     company: "Apr",
     year: "2025",
     title: "Cafe Astra",
