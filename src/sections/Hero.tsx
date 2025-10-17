@@ -156,7 +156,7 @@ export const HeroSection = () => {
             <ArrowDown classname="size-6" />
           </button>
           <a
-            href="https://syed-resume.tiiny.site"
+            href="https://syedabdulrahman.tiiny.site"
             target="_blank"
             className="relative z-50"
           >
