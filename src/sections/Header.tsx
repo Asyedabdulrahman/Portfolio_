@@ -2,17 +2,20 @@ export const Header = () => {
   return (
     <div className="flex justify-center items-center fixed top-3 pt-4 w-screen max-w-screen overflow-x-hidden z-10">
       <nav className="flex flex-wrap gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
-        <a href="#heroSection" className="nav-items max-w-xs truncate">
+        <a href="/#heroSection" className="nav-items max-w-xs truncate">
           Home
         </a>
-        <a href="#project" className="nav-items max-w-xs truncate">
+        <a href="/#project" className="nav-items max-w-xs truncate">
           Project
         </a>
-        <a href="#about" className="nav-items max-w-xs truncate">
+        <a href="/#about" className="nav-items max-w-xs truncate">
           About
         </a>
+        <a href="/blog" className="nav-items max-w-xs truncate">
+          Blog
+        </a>
         <a
-          href="#footerOrContacts"
+          href="/#footerOrContacts"
           className="nav-items bg-white rounded-3xl text-gray-900 hover:bg-white/70 hover:text-gray-900 max-w-xs truncate"
         >
           Contacts
