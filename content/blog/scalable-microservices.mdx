@@ -1,0 +1,53 @@
+---
+title: "Architecting Scalable Microservices with NestJS and Redis"
+date: "2024-05-09"
+description: "A deep dive into building production-grade backend systems using NestJS, focusing on performance and scalability with Redis caching."
+tags: ["System Design", "Backend", "Redis"]
+category: "System Design"
+---
+
+## Introduction
+
+Building scalable microservices requires more than just choosing the right framework. It requires a thoughtful approach to data management, caching, and inter-service communication. In this post, we'll explore how to use **NestJS** and **Redis** to build a high-performance backend.
+
+## Why NestJS?
+
+NestJS provides a robust, modular architecture that is perfect for large-scale applications. It's built with TypeScript and follows solid engineering principles.
+
+### Syntax Highlighting Test (NestJS/TypeScript)
+
+```typescript
+@Injectable()
+export class CacheService {
+  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
+
+  async getProduct(id: string): Promise<Product> {
+    const cachedProduct = await this.cacheManager.get<Product>(`product_${id}`);
+    if (cachedProduct) {
+      return cachedProduct;
+    }
+    // Fetch from database if not in cache
+    const product = await this.db.find(id);
+    await this.cacheManager.set(`product_${id}`, product, 3600);
+    return product;
+  }
+}
+```
+
+## Database Performance with PostgreSQL
+
+When working with PostgreSQL, optimizing your queries is crucial. 
+
+```sql
+-- Optimized query for fetching products with categories
+SELECT p.id, p.name, c.name as category_name
+FROM products p
+JOIN categories c ON p.category_id = c.id
+WHERE p.status = 'active'
+ORDER BY p.created_at DESC
+LIMIT 10;
+```
+
+## Conclusion
+
+By combining the strengths of NestJS, Redis, and PostgreSQL, you can create a system that is both maintainable and highly performant.

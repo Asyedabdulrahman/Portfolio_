@@ -11,10 +11,15 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.3.21",
+    "gray-matter": "^4.0.3",
     "next": "14.2.35",
+    "next-mdx-remote": "^6.0.0",
+    "nodemon": "^3.1.14",
     "react": "^18",
     "react-dom": "^18",
     "react-use-measure": "^2.1.1",
+    "rehype-highlight": "^7.0.2",
+    "rehype-slug": "^6.0.0",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
