@@ -14,6 +14,9 @@ export const Header = () => {
         <a href="/blog" className="nav-items max-w-xs truncate">
           Blog
         </a>
+        <a href="/activity" className="nav-items max-w-xs truncate">
+          Activity
+        </a>
         <a
           href="/#footerOrContacts"
           className="nav-items bg-white rounded-3xl text-gray-900 hover:bg-white/70 hover:text-gray-900 max-w-xs truncate"
