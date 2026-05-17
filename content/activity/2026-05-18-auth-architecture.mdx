@@ -1,0 +1,55 @@
+---
+title: "Designing Advanced Auth System: Session Strategies & MFA Setup"
+date: "2026-05-18"
+project: "Advanced Auth Application"
+category: "Backend"
+tags: ["Security", "Redis", "Next.js", "Sessions"]
+---
+
+Today I spent a significant portion of my day architecting the session management layer and multi-factor authentication (MFA) flow for my new **Complete Advanced Auth Application**.
+
+Here is a quick overview of the goals and technical standards I've implemented:
+
+## 1. The Multi-Layered Authentication Flow
+
+To make this app enterprise-grade, I'm combining traditional password-based authentication with a secure, secondary two-factor system.
+
+* **Layer 1:** Secure Credentials with Argon2id password hashing.
+* **Layer 2:** Device-level OTP (One-Time Password) generation utilizing TOTP algorithms (compatible with Google Authenticator).
+* **Layer 3:** Real-time token blacklisting inside Redis for compromised sessions or immediate logout enforcement.
+
+## 2. Session Hashing & Store Implementation
+
+Instead of simple stateless JWTs (which are difficult to revoke in real-time), I'm utilizing a database-backed **hybrid session strategy**. JWTs are stored in secure HTTP-only cookies, but their unique IDs are checked against a super-fast Redis blacklist cache on every request.
+
+Here's the core Redis session invalidation routine I developed:
+
+```typescript
+import Redis from "ioredis";
+
+const redis = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
+
+export async function revokeSession(userId: string, sessionId: string): Promise<void> {
+  const sessionKey = `user:${userId}:session:${sessionId}`;
+  
+  // 1. Check if the session exists in our store
+  const exists = await redis.exists(sessionKey);
+  if (!exists) {
+    throw new Error("Session not found or already revoked");
+  }
+
+  // 2. Perform a multi-transaction delete and add to blacklist
+  const multi = redis.multi();
+  multi.del(sessionKey);
+  multi.sadd(`blacklist:sessions`, sessionId);
+  multi.expire(`blacklist:sessions:${sessionId}`, 86400); // 24 hours expiry
+  
+  await multi.exec();
+  
+  console.log(`[AUTH] Session ${sessionId} for User ${userId} successfully revoked.`);
+}
+```
+
+## Next Steps
+
+Tomorrow I'll be implementing **Rate Limiting** on the login endpoints using a Redis token bucket algorithm, followed by standard OAuth integration for Google and GitHub accounts.

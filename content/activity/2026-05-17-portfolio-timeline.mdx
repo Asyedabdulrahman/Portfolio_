@@ -1,0 +1,41 @@
+---
+title: "Building the Developer Activity Journal Module"
+date: "2026-05-17"
+project: "Personal Portfolio"
+category: "Frontend"
+tags: ["Next.js", "Framer Motion", "Tailwind CSS", "MDX"]
+---
+
+To better share my day-to-day coding journey, I've designed and built a brand new **Recent Activity Journal / Developer Log** page for this portfolio. 
+
+## The Architectural Design Goals
+
+1. **Perfect Design Harmony:** The timeline uses standard glassmorphism tokens, border highlights, and visual styles matching the main portfolio section and the tech blog.
+2. **Instant Client-Side Filtering:** Instead of slow page reloads, a debounced search bar and selection pills make filtering by Project/Category feel instant.
+3. **Pure Server Component Compilation:** The entire MDX rendering is compiled on the server side using React Server Components (`next-mdx-remote/rsc`), keeping client bundle size tiny and improving SEO performance.
+4. **Fluid Entry Animations:** Using `framer-motion`, each timeline card and glowing node slides up elegantly as it enters the viewport.
+
+Here is a look at the responsive CSS timeline structure I designed:
+
+```html
+<!-- Responsive Split Layout Column Structure -->
+<div className="flex flex-col md:flex-row gap-6 md:gap-10 items-stretch">
+  <!-- Desktop split date column -->
+  <div className="hidden md:flex md:w-36 flex-shrink-0 text-right flex-col pt-8">
+    <span className="text-sm font-mono text-white/40">May 17, 2026</span>
+  </div>
+  
+  <!-- Central track line & double-border glowing node dot -->
+  <div className="flex flex-col items-center relative w-8 flex-shrink-0">
+    <div className="absolute top-0 bottom-0 w-[2px] bg-white/10"></div>
+    <div className="absolute top-8 w-4 h-4 rounded-full bg-gray-900 border border-emerald-300"></div>
+  </div>
+  
+  <!-- Right dynamic glassmorphic card container -->
+  <div className="flex-grow pb-12">
+    <!-- MDX and card contents go here -->
+  </div>
+</div>
+```
+
+By keeping files modularized inside `src/components/activity/`, the page remains extremely easy to scale and maintain. I'm very happy with how it turned out!
