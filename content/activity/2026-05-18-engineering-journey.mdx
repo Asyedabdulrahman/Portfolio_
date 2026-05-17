@@ -1,0 +1,66 @@
+---
+title: "My Full-Stack & Systems Engineering Journey So Far"
+date: "2026-05-18"
+project: "Engineering Roadmap"
+category: "Milestone"
+tags: ["Architecture", "System Design", "SQL", "Redux", "RBAC"]
+---
+
+Here is a consolidated summary of the major engineering milestones, backend systems, and architectural paradigms I've been mastering throughout this project journey. This documents my transition from building standalone features to designing cohesive, production-grade systems.
+
+---
+
+## 🔐 Authentication & Backend System Development
+
+I've been progressively designing and building a multi-layered authentication and authorization backend system from scratch.
+
+* **Frontend Auth Flow:** Designed resilient client-side authentication states in React, transitioning from simple Context API handlers into centralized, predictable **Redux Toolkit** architectures.
+* **Session & Token Management:** Researched security tradeoffs between stateless JWT and hybrid database-backed sessions with real-time Redis invalidation.
+* **SQL Database Schemas:** Designed Normalized relational database schemas, query aliasing, and task assignment modeling.
+
+---
+
+## 🗄️ SQL & Database Engineering
+
+I've focused heavily on relational algebra, data integrity, and complex query optimizations to support team collaborations and permissions:
+
+```sql
+SELECT 
+    tasks.title, 
+    tasks.status, 
+    users.name AS assigned_user
+FROM tasks
+JOIN users ON tasks.assigned_id = users.id
+WHERE tasks.status = 'active';
+```
+
+Developing a normalization-first mindset ensures database schemas remain clean, scale-ready, and optimized for indexing.
+
+---
+
+## 🔒 Role-Based Access Control (RBAC)
+
+I'm currently implementing **RBAC (Phase 12)** to introduce secure, granular authorization controls:
+
+* **Roles vs. Permissions:** Modeling multi-tenant permission layers (Admin, Team Lead, User).
+* **Middleware Authorization:** Developing custom middleware handlers to intercept incoming HTTP requests and enforce endpoint protection.
+* **Access Policies:** Implementing resource-level verification to prevent IDOR (Insecure Direct Object Reference) vulnerabilities.
+
+---
+
+## ⚛️ State Management & UI Refinements
+
+Moving state architecture from React Context to **Redux Toolkit (RTK)** to handle complex system states:
+
+* Unified handlers for centralized forms, file uploads, and session cookies.
+* Advanced responsive styling using Tailwind CSS, visual state indicators, and polished edge-case rendering.
+
+---
+
+## 🧠 System Design & Scalable Thinking
+
+I've been shifting my focus toward backend scalability and distributed system patterns:
+
+* **Distinct Count Problems:** Designing structures to calculate unique metrics over massive (10TB+) log streams.
+* **Distributed Services:** Reasoning through data consistency, read/write replicas, caching, and failover procedures.
+* **Mindset Shift:** Moving from *"Build features"* to **"Build systems correctly"** by carefully weighing engineering tradeoffs and production constraints.
